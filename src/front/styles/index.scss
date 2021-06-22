@@ -14,20 +14,27 @@ body{
   margin: 1em auto;
   border-radius: 50%;
   background: #DDDDDD;
-  transition: box-shadow 1.3s;
-    
+  transition: box-shadow 2.3s ease-in-out;
+    transition: background-color 2.3s ease-in-out;
+  //transition: box-shadow 2.3s ease-in-out;
+  //box-shadow: 6px 6px 20px -8px #1d1d1d46, -6px -6px 20px -4px rgba(255, 255, 255, 0.815), -6px -6px 20px -4px rgba(20, 20, 20, 0.151);
   
   
 }
-.circle:not(:hover){
-    -webkit-box-shadow: 6px 6px 20px -8px #1b1b1b4d, -6px -6px 20px -4px rgba(255, 255, 255, 0.801), -6px -6px 20px -4px rgba(29, 29, 29, 0.192); 
+.circle:before{
     box-shadow: 6px 6px 20px -8px #1d1d1d46, -6px -6px 20px -4px rgba(255, 255, 255, 0.815), -6px -6px 20px -4px rgba(20, 20, 20, 0.151);
-
+}
+.circle:not(:hover){
+    // -webkit-box-shadow: 6px 6px 20px -8px #1b1b1b4d, -6px -6px 20px -4px rgba(255, 255, 255, 0.801), -6px -6px 20px -4px rgba(29, 29, 29, 0.192); 
+    box-shadow: 6px 6px 20px -8px #1d1d1d46, -6px -6px 20px -4px rgba(255, 255, 255, 0.815), -6px -6px 20px -4px rgba(20, 20, 20, 0.151);
+    //filter: drop-shadow(rgba(37, 37, 37, 0.055));
+    
     
 }
 .circle:hover{
-
-    background: rgb(214, 214, 214);
+    transition: box-shadow 2.3s ease-in-out, background-color 2.3s ease-in-out;
+    
+    background: rgb(211, 210, 210);
     -webkit-box-shadow: inset -3px -3px 8px -3px rgba(255, 255, 255, 0.26), inset 6px 6px 5px -4px rrgba(37, 37, 37, 0.082) inset 6px 6px 10px -4px rgba(37, 37, 37, 0.075); 
 box-shadow: inset -3px -3px 8px -3px rgba(255, 255, 255, 0.836), inset 6px 6px 5px -4px rgba(37, 37, 37, 0.055), inset 6px 6px 10px -4px rgba(37, 37, 37, 0.164);
         
