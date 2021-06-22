@@ -62,8 +62,57 @@ box-shadow: inset -3px -3px 8px -3px rgba(255, 255, 255, 0.836), inset 6px 6px 5
   display: inline-block;
 }
 
-
-
+.block{
+    position: relative;
+  width: 10%;
+  height: 0;
+  padding: 5% 0;
+  margin: 1em auto;
+  
+  background: #DDDDDD;
+  transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out;
+    
+    
+   
+        
+}
+.block:before{
+    box-shadow: 6px 6px 20px -8px #1d1d1d46, -6px -6px 20px -4px rgba(255, 255, 255, 0.815), -6px -6px 20px -4px rgba(20, 20, 20, 0.151);
+}
+.block:not(:hover){
+    // -webkit-box-shadow: 6px 6px 20px -8px #1b1b1b4d, -6px -6px 20px -4px rgba(255, 255, 255, 0.801), -6px -6px 20px -4px rgba(29, 29, 29, 0.192); 
+    box-shadow: 6px 6px 20px -8px #1d1d1d46, -6px -6px 20px -4px rgba(255, 255, 255, 0.815), -6px -6px 20px -4px rgba(20, 20, 20, 0.151);
+    //filter: drop-shadow(rgba(37, 37, 37, 0.055));
+    
+    
+}
+.block:hover{
+    transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out;
+    
+    background: rgb(211, 210, 210);
+    -webkit-box-shadow: inset -3px -3px 8px -3px rgba(255, 255, 255, 0.26), inset 6px 6px 5px -4px rrgba(37, 37, 37, 0.082) inset 6px 6px 10px -4px rgba(37, 37, 37, 0.075); 
+box-shadow: inset -3px -3px 8px -3px rgba(255, 255, 255, 0.836), inset 6px 6px 5px -4px rgba(37, 37, 37, 0.055), inset 6px 6px 10px -4px rgba(37, 37, 37, 0.164);
+        
+}
+.blockContent{
+     position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.blockContent:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+}
+.blockContent span {
+  vertical-align: middle;
+  display: inline-block;
+}
 
 .shimmer {
   display: inline-block;
