@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
-export const Navbar = () => {
+export const MyNavbar = () => {
 	return (
-		<nav className="navbar mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Edian</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn  p-3">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
+		<Navbar variant="light">
+			<Navbar.Brand href="#home">Navbar</Navbar.Brand>
+			<Nav className="ml-auto">
+				<Nav.Link href="/demo">About</Nav.Link>
+				<Nav.Link href="#features">Contact</Nav.Link>
+				<Nav.Link href="#pricing">Resume</Nav.Link>
+			</Nav>
+		</Navbar>
 	);
 };
